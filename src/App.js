@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import UserInterface from "./UserInterface"
-import StylesContext from "./StylesContext";
+import UserInterface from "./components/UserInterface"
+import StylesContext from "./components/StylesContext";
 
 
 function App() {
- const stylin = {
+  const stylin = {
     background: "#1ECD97",
     display: "block",
     width: 150,
@@ -14,14 +14,15 @@ function App() {
     fontSize: 18,
     letterSpacing: 1,
     border: "2px solid #1ECD97",
-    borderRadius: 15
+    borderRadius: 10,
+    margin: "auto",
   };
 
 
   return (
     <main>
-      
-    <StylesContext.Provider value={stylin}>
+
+      <StylesContext.Provider value={stylin}>
         <h1
           style={{
             color: "#FEE001",
@@ -32,7 +33,7 @@ function App() {
           Welcome to Comics Galore!
         </h1>
         <UserInterface />
-        </StylesContext.Provider>
+      </StylesContext.Provider>
 
     </main>
 
